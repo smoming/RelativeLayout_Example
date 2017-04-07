@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Layout_Relative" x:Class="Layout_Relative.Layout_RelativePage">
+<!--	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />-->
+	<!--<ContentPage.Padding>
+		<Thickness>
+			0,20,0,0
+		</Thickness>
+	</ContentPage.Padding>-->
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+	</ContentPage.Padding>
+	<!--<RelativeLayout>
+		<BoxView x:Name="xRedBox" Color="Red" 
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent, 
+				Property=Height,
+				Factor=0.15,
+				Constant=0
+			}"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=1,
+				Constant=0
+			}"
+			RelativeLayout.HeightConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.5,
+				Constant=0
+			}"
+		/>
+
+		<BoxView x:Name="xBlueBox" Color="Blue" 
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToView, 
+				ElementName=xRedBox,
+				Property=Y,
+				Factor=1,
+				Constant=60
+			}"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToView,
+				ElementName=xRedBox,
+				Property=Width,
+				Factor=0.5,
+				Constant=0
+			}"
+			RelativeLayout.HeightConstraint="{
+				ConstraintExpression Type=RelativeToView,
+				ElementName=xRedBox,
+				Property=Height,
+				Factor=0.5,
+				Constant=0
+			}"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToView, 
+				ElementName=xRedBox,
+				Property=X,
+				Factor=1,
+				Constant=20
+			}"
+
+		/>
+	</RelativeLayout>-->
+
+	<!--<RelativeLayout>
+		<BoxView x:Name="xGreenBox"
+			BackgroundColor="Green" 
+			WidthRequest="100" HeightRequest="100" 
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.5,
+				Constant=-50
+			}"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.5,
+				Constant=-50
+			}"
+		/>
+		<Button x:Name="xRedBox"
+			BorderRadius="28"
+			BackgroundColor="Red" 
+			WidthRequest="50" HeightRequest="50"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToView,
+				ElementName=xGreenBox,
+				Property=Y,
+				Factor=1,
+				Constant=-20
+			}"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToView,
+				ElementName=xGreenBox,
+				Property=X,
+				Factor=1.5,
+				Constant=10
+			}"
+		/>
+	</RelativeLayout>-->
+
+<!--	Source="http://cdn2.ettoday.net/images/2369/d2369254.jpg"-->
+	<RelativeLayout>
+		<Image Source= "https://goo.gl/c178th"
+			Aspect="AspectFill"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0,
+				Constant=8
+			}"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.3,
+				Constant=0
+			}"
+		/>
+<!--		Text="喵星人海放「藍月雙眼」　僅5分鐘奴才就投降！" -->
+		<Label Text="猜猜我是誰！？" 
+			FontSize="30"
+			VerticalTextAlignment="Center"
+			HorizontalTextAlignment="Center"
+			TextColor="White"
+			BackgroundColor="Black" 
+			Opacity="0.5"
+			HeightRequest="50"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=1,
+				Constant=0
+			}"
+		/>
+
+		<BoxView BackgroundColor="Black" 
+			HeightRequest="25"
+			WidthRequest="80"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=0.4,
+				Constant=50
+			}"
+
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.4,
+				Constant=-5
+			}"
+		/>
+		
+		<Label
+			x:Name="lbLike"
+			Text="喜歡" 
+			FontSize="25"
+			VerticalTextAlignment="Center"
+			HorizontalTextAlignment="Center"
+			TextColor="White"
+			BackgroundColor="Black" 
+			Opacity="0.5"
+			HeightRequest="50"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=1,
+				Constant=-50
+			}"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.5,
+				Constant=0
+			}"
+		/>
+		<Label Text="有趣" 
+			FontSize="25"
+			VerticalTextAlignment="Center"
+			HorizontalTextAlignment="Center"
+			TextColor="White"
+			BackgroundColor="Black" 
+			Opacity="0.5"
+			HeightRequest="50"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Height,
+				Factor=1,
+				Constant=-50
+			}"
+			RelativeLayout.WidthConstraint="{
+				ConstraintExpression Type=RelativeToParent,
+				Property=Width,
+				Factor=0.5,
+				Constant=0
+			}"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression Type=RelativeToView,
+				ElementName=lbLike,
+				Property=Width,
+				Factor=1,
+				Constant=0
+			}"
+		/>
+	</RelativeLayout>
+</ContentPage>
